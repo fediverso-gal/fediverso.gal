@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v1.14.2/",
+    "preact/jsx-runtime": "https://cdn.skypack.dev/preact/jsx-runtime?dts",
+    "preact/jsx-dev-runtime": "https://cdn.skypack.dev/preact/jsx-dev-runtime?dts"
+  }
+}
