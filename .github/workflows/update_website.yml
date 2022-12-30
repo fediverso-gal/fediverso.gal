@@ -18,6 +18,7 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIV_KEY }}
+          envs: DENO_INSTALL,PATH
           script_stop: true
           script: |
             echo $PATH
