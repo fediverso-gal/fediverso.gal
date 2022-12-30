@@ -15,8 +15,12 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIV_KEY }}
+          script_stop: true
           script: |
+            whoiam
+            ls
             cd fediverso.gal
+            ls
             git pull
             echo $PATH
             deno task lume
