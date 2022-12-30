@@ -11,9 +11,6 @@ jobs:
 
     steps:
       - uses: appleboy/ssh-action@v0.1.6
-        env:
-          DENO_INSTALL: 
-          PATH: "${DENO_INSTALL}/bin:$PATH"
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
