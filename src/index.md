@@ -1,5 +1,6 @@
 ---
 layout: index.tsx
+title: fediverso.gal
 ---
 # Hello world
 
