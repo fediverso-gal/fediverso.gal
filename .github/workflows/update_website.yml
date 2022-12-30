@@ -1,0 +1,21 @@
+name: Update website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.PRIV_KEY }}
+          script: |
+            cd fediverso.gal
+            git pull
+            deno task lume
