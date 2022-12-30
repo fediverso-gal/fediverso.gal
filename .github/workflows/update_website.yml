@@ -11,16 +11,16 @@ jobs:
 
     steps:
       - uses: appleboy/ssh-action@v0.1.6
+        env:
+          DENO_INSTALL: "/home/${{ secrets.USERNAME }}"
+          PATH: "${DENO_INSTALL}/bin:$PATH"
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.PRIV_KEY }}
           script_stop: true
           script: |
-            whoami
-            ls
-            cd fediverso.gal
-            ls
-            git pull
             echo $PATH
+            cd fediverso.gal
+            git pull
             deno task lume
