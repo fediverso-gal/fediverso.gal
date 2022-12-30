@@ -18,7 +18,7 @@ jobs:
           script_stop: true
           script: |
             export DENO_INSTALL="$HOME/.deno"
-            export PATH="DENO_INSTALL/bin:$PATH"
+            export PATH="$DENO_INSTALL/bin:$PATH"
             echo $PATH
             cd fediverso.gal
             git pull
