@@ -29,39 +29,44 @@ export default ({title, description, about, services, sponsors, comp}: LandingPr
 
             <title>{title}</title>
 
-            <link href="/index.css" rel="stylesheet" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Open+Sans&family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossOrigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href={`/index.css?date=${Date.now()}`} />
         </head>
         <body>
             <comp.Header title={title} />
-            <div>
-                {about.map(paragraph => <p>{paragraph}</p>)}
-            </div>
-            <div>
-                <h2>Servizos do fediverso.gal</h2>
-                <ul>
-                    {services.map(service => <li>
-                        <comp.Card
+            <main>
+                <section class="about">
+                    {about.map(paragraph => <p>{paragraph}</p>)}
+                </section>
+                <section class="grid_section">
+                    <h2>Servizos do fediverso.gal</h2>
+                    <section class="grid grid_center">
+                        {services.map(service => <comp.ui.Card
                             title={service.name}
                             url={service.url}
                             description={service.description}
                             image={service.image}
-                        />
-                    </li>)}
-                </ul>
-            </div>
-            <div>
-                <h2>Os nosos patrocinadores</h2>
-                <ul>
-                    {sponsors.map(sponsor => <li>
-                        <comp.Card
+                            imageFit
+                        />)}
+                    </section>
+                </section>
+                <section class="grid_section">
+                    <h2>Os nosos patrocinadores</h2>
+                    <section class="grid">
+                        {sponsors.map(sponsor => <comp.ui.Card
                             title={sponsor.name}
                             url={sponsor.url}
                             image={sponsor.image}
-                        />
-                    </li>)}
-                </ul>
-            </div>
+                            small
+                        />)}
+                    </section>
+                </section>
+            </main>
             <comp.Footer />
+            <script src="/index.js" />
         </body>
     </html>
 );
