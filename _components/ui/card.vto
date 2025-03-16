@@ -1,0 +1,14 @@
+<article>
+    <a class="{{ small ? 'small_card' : '' }}" href={url}>
+        <img
+            class="{{ imageFit ? 'image_fit' : '' }}"
+            src={{ `imaxes/${image}` }}
+        />
+        {{ if (title || description) }}
+            <div>
+                {{ if title }}<h3>{{ title  }}</h3> {{ /if }}
+                {{ if description }}<p>{{ description }}</p>{{ /if }}
+            </div>
+        {{ /if }}
+    </a>
+</article>

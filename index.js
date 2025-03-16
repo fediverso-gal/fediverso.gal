@@ -45,15 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const place = Math.floor(Math.random() * places.length);
     const pictureElem = document.querySelector('header picture');
     const avifSourceElem = document.createElement('source');
-    avifSourceElem.setAttribute('srcset', `/images/places/${places[place].name}.avif`);
+    avifSourceElem.setAttribute('srcset', `/imaxes/places/${places[place].name}.avif`);
     avifSourceElem.setAttribute('type', 'image/avif');
     pictureElem.appendChild(avifSourceElem);
     const webpSourceElem = document.createElement('source');
-    webpSourceElem.setAttribute('srcset', `/images/places/${places[place].name}.webp`);
+    webpSourceElem.setAttribute('srcset', `/imaxes/places/${places[place].name}.webp`);
     webpSourceElem.setAttribute('type', 'image/webp');
     pictureElem.appendChild(webpSourceElem);
     const imgElem = document.createElement('img');
-    imgElem.setAttribute('src', `/images/places/${places[place].name}.jpg`);
+    imgElem.setAttribute('src', `/imaxes1/places/${places[place].name}.jpg`);
     pictureElem.appendChild(imgElem);
     const byElement = document.getElementsByClassName("attribution")[0];
     byElement.textContent = `${places[place].author} - ${places[place].source} (${places[place].license})`;

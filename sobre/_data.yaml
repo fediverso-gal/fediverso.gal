@@ -1,0 +1,31 @@
+doazons:
+  - ano: 2024
+    doadores: 13
+    custe: 435,37 €
+    cantidade: 525,19 €
+
+doadores:
+  - nome: GALPon
+    alias: "@galpon@mastodon.gal"
+    conta: https://mastodon.gal/@galpon
+    icona: https://static.mastodon.gal/accounts/avatars/109/222/517/121/629/772/original/3f882ce8f06ca356.png
+
+  - nome: Denís Bermúdez
+    alias: "@dinisinho@mastodon.gal"
+    conta: https://mastodon.gal/@dinisinho
+    icona: https://static.mastodon.gal/accounts/avatars/109/309/476/279/550/621/original/1a06bfe7db8cc5ec.jpg
+
+  - nome: Roi.
+    alias: "@roicou@mastodon.gal"
+    conta: https://mastodon.gal/@roicou
+    icona: https://static.mastodon.gal/accounts/avatars/109/529/005/362/219/538/original/1f6b9082dd42a851.png
+
+  - nome: o Viri (Met An Unknown Fate)
+    alias: "@viriato@mastodon.gal"
+    conta: https://mastodon.gal/@viriato
+    icona: https://static.mastodon.gal/accounts/avatars/109/326/057/305/462/744/original/b990f2363df2e18a.png
+
+  - nome: O Óscar
+    alias: "@misteroom@mastodon.gal"
+    conta: https://mastodon.gal/@misteroom
+    icona: https://static.mastodon.gal/accounts/avatars/109/273/669/670/865/743/original/b0f9d653fdfc0364.jpg

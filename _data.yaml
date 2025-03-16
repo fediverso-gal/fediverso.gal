@@ -1,0 +1,17 @@
+servizos:
+  - nome: mastodon.gal
+    url: https://mastodon.gal
+    descripcion: |
+      Instancia de mastodon para a comunidade galega.
+    imaxe: hero_mastodon-gal.png
+
+  - nome: foros.fediverso.gal
+    url: https://foros.fediverso.gal
+    descripcion: |
+      Comparte e segue a comunidades do fediverso dende o noso servidor de Lemmy.
+    imaxe: lemmy.svg
+
+sponsors:
+  - nome: dinahosting
+    url: https://dinahosting.com
+    imaxe: dinahosting.png

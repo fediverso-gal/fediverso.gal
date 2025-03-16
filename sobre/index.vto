@@ -1,0 +1,49 @@
+---
+layout: layout.vto
+title: Doazóns | fediverso.gal
+---
+<section class="sobre">
+    <p>
+        Páxina en construcción
+    </p>
+</section>
+
+<section class="resumos">
+{{ for resumo of doazons }}
+    <h2>Doazóns en {{ resumo.ano }}</h2>
+
+    <div class="resumo">
+        {{ comp.doazons({ resumo }) }}
+        {{ comp.gastos({ resumo }) }}
+    </div>
+{{ /for }}
+</section>
+
+<section class="sponsors">
+    <h2>Nosos patrocinadores</h2>
+
+    <div>
+    {{ for sponsor of sponsors }}
+        {{ comp.ui.sponsor({ name: sponsor.nome, url: sponsor.url, image: sponsor.imaxe }) }}
+    {{ /for }}
+    </div>
+</section>
+
+<section class="doadores">
+    <h2>Doadores</h2>
+
+    <p>Se nalgún momento doaches e queres sair aquí, contacta a <a href="mailto:informacion@fediverso.gal">informacion@fediverso.gal</a> ou a calquer admin.</p>
+
+    <div>
+    {{ for doador of doadores }}
+        {{ comp.ui.user({ name: doador.nome, url: doador.conta, icon: doador.icona, alias: doador.alias }) }}
+    {{ /for }}
+    </div>
+</section>
+
+<section class="reportes">
+    <h2>Resumos anuales</h2>
+    <ul>
+        <li><a href>Reporte 2024</a> - Póximamente</li>
+    </ul>
+</section>

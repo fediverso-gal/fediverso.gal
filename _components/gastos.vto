@@ -1,0 +1,70 @@
+---
+css: |
+    .gastos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+        width: 100%;
+
+        article {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            h3 {
+                font-family: 'Red Hat Display', 'Helvetica', sans-serif;
+                font-size: 1.333em;
+                color: #005BBF;
+                margin: 0;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 0.5em;
+
+                li {
+                    width: 100%;
+                }
+
+                li::marker {
+                    color: #0099CC;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .gastos {
+            flex-direction: column;
+
+            article {
+                flex-direction: column;
+            }
+
+            article:first-child {
+                align-items: center;
+            }
+        }
+    }
+---
+<div class="gastos">
+    <article>
+        {{ comp ui.Chip }}
+            {{ resumo.custe }} en custos
+        {{ /comp }}
+    </article>
+
+    <article>
+        <h3>En qué servizos?</h3>
+        <ul>
+            <li>Dominios <a href>mastodon.gal</a> e <a href>fediverso.gal</a>. (38,49 €/ano)</li>
+            <li>Hosting patrocinado por <a href>Dinahosting</a> (supondría 1054,62 €/ano)</li>
+            <li>DigitalOcean para espazos de disco e DNS (entre 15 e 20 $/mes)</li>
+            <li>Sendinblue/Brevo para envío de mails (22,99 €/mes)</li>
+        </ul>
+    </article>
+</div>

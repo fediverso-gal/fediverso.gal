@@ -1,0 +1,47 @@
+---
+css: |
+    .user {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5em;
+        align-items: center;
+        border: solid 1px var(--base-color);
+        border-radius: 4px;
+        width: 100%;
+        height: 100px;
+        padding: 0.25em 0.5em;
+        color: var(--text-color);
+
+        img {
+            width: 90px;
+            height: 90px;
+            border-radius: 16px;
+        }
+
+        div {
+            gap: 0.25em;
+            flex-direction: column;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            span:last-child {
+                font-size: 0.9em;
+                color: var(--base-color);
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        .user {
+            width: 400px;
+        }
+    }
+---
+<a class="user" role="button" href="{{ url }}">
+    <img src="{{ icon }}" alt="{{ alias }} icon">
+    <div>
+        <span>{{ name }}</span>
+        <span>{{ alias }}</span>
+    </div>
+</a>

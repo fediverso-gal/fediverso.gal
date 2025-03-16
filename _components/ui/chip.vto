@@ -1,0 +1,18 @@
+---
+css: |
+    .chip {
+        width: 100%;
+        border: solid 1px #0099CC;
+        background-color: #D1E5FB;
+        border-radius: 8px;
+        padding: 1em 2em;
+        text-align: center;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .chip {
+            width: 200px;
+        }
+    }
+---
+<div class="chip">{{ content }}</div>
